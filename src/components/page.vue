@@ -1,9 +1,9 @@
 <template>
- <div class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover" style="background-image:url('bg.jpg');">
+ <div class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover py-16 md:py-0" style="background-image:url('bg.jpg');">
 
 
 
-  <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+  <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto">
     
 	<div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-100 mx-6 lg:mx-0">
 	
