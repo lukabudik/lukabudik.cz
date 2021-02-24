@@ -3,7 +3,8 @@ const typography = require('windicss/plugin/typography')
 
 
 module.exports = {
-    theme: {
+  darkMode: 'media',  
+  theme: {
       fontFamily: {
         sans: ['Lato', 'sans'],
       }
