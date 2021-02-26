@@ -1,7 +1,6 @@
 <template>
   <div
-    class="font-sans antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0"
-    style="background-image: url('bg.webp')"
+    class="font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0 bg-gray-50 dark:bg-gray-700"
   >
     <div
       class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto"
@@ -168,7 +167,7 @@
     </div>
   </div>
   <div class="absolute top-0 right-0 h-12 w-18 p-4" >
-    <button class="js-change-theme focus:outline-none" @click="toggleDark">{{isDark?'🌙':'☀️'}}</button>
+    <button class="js-change-theme focus:outline-none" @click="toggleDark">{{isDark?'🌙☀️':'🌙'}}</button>
   </div>
 </template>
 
