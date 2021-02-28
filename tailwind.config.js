@@ -6,7 +6,7 @@ module.exports = {
   darkMode: 'class',  
   theme: {
       fontFamily: {
-        sans: ['Lato', 'sans'],
+        sans: ['Montserrat', 'sans'],
       }
     }
 }

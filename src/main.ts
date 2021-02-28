@@ -8,7 +8,7 @@ import en from './locales/en.json'
 import cs from './locales/cs.json'
 
 const i18n = createI18n({
-    locale: 'cs',
+    locale: 'en',
     messages: {
       en,
       cs
