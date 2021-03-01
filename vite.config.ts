@@ -12,7 +12,7 @@ export default defineConfig({
     WindiCSS(),
     ViteFonts({
       google: {
-        families: ['Lato']
+        families: ['Montserrat']
       },
     }),
     vueI18n({
