@@ -15,7 +15,7 @@
               class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
               width="1229"
               height="1229"
-              src="luka_sm.webp" alt="Luka Budík portrét"
+              :src="'luka_sm.webp'" alt="Luka Budík portrét"
             />
             <h1 class="text-3xl font-bold pt-8 lg:pt-0">{{ t("name") }}</h1>
             <div
