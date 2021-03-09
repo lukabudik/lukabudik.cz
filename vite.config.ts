@@ -4,6 +4,8 @@ import WindiCSS from 'vite-plugin-windicss'
 import ViteFonts from 'vite-plugin-fonts'
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
 import path from "path"
+import Pages from 'vite-plugin-pages'
+import ViteComponents from 'vite-plugin-components'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,6 +20,9 @@ export default defineConfig({
     vueI18n({
       include: path.resolve(__dirname, './src/locales/**')
 
-    })
+    }),
+    Pages(),
+    ViteComponents(),
   ]
+
 })
