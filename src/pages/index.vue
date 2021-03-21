@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0 bg-gray-50 dark:bg-gray-700"
+      class="min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0 bg-gray-200 dark:bg-gray-700"
     >
       <div
         class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto"
@@ -55,7 +55,7 @@
               <div class="inline-flex w-1/3 justify-center">
                 <router-link to="projects">
                   <a
-                    class="h-6 text-gray-600 dark:text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                    class="h-6 text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                     >{{ t("projects") }}
                   </a>
                 </router-link>
@@ -63,7 +63,7 @@
 
               <div class="inline-flex w-1/3 justify-center">
                 <a
-                  class="h-6 text-gray-600 dark:text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   >{{ t("contact") }}
                 </a>
               </div>
@@ -79,7 +79,7 @@
                 target="_blank"
                 href="https://www.facebook.com/lukabudik"
                 ><svg
-                  class="h-6 fill-current text-gray-600 dark:text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@
                 target="_blank"
                 href="https://www.linkedin.com/in/lukabudik/"
                 ><svg
-                  class="h-6 fill-current text-gray-600 dark:text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@
                 target="_blank"
                 href="https://github.com/lukabudik"
                 ><svg
-                  class="h-6 fill-current text-gray-600 dark:text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@
                 target="_blank"
                 href="https://soundcloud.com/sheffikthegod"
                 ><svg
-                  class="h-6 fill-current text-gray-600 dark:text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +139,7 @@
                 target="_blank"
                 href="https://dribbble.com/luka_budik"
                 ><svg
-                  class="h-6 fill-current text-gray-600 dark:text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@
                 target="_blank"
                 href="https://www.instagram.com/luka_budik/"
                 ><svg
-                  class="h-6 fill-current text-gray-600 dark:text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
