@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0 bg-gray-200 dark:bg-gray-700"
+      class="transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0 bg-gray-200 dark:bg-gray-700"
     >
       <div
         class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto"
@@ -179,7 +179,7 @@
         </div>
       </div>
     </div>
-    <div class="absolute top-0 right--10 h-12 w-18 p-4 flex">
+    <div class="absolute top-0 right--10 h-12 w-18 m-4 flex">
       <button
         class="js-change-theme focus:outline-none px-4"
         @click="toggleDark"
