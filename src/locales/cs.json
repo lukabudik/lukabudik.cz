@@ -8,5 +8,6 @@
     "contactme": "Kontaktujte mne",
     "projects": "projekty",
     "contact": "kontakt",
-    "portfolio_desc": "Vytvořil jsem své vlastní portfolio pomocí Vue.js a Tailwindcss! Portfolio je open source a můžete jej volně používat!"
+    "portfolio_desc": "Vytvořil jsem své vlastní portfolio pomocí Vue.js a Tailwindcss! Portfolio je open source a můžete jej volně používat!",
+    "nameless_desc": "Založil jsem esportový tým Nameless.esport, který byl téměř dva roky jedním z nejlepších v Česku.",
 }

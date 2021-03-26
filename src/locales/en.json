@@ -8,5 +8,6 @@
     "contactme": "Contact me",
     "projects": "projects",
     "contact": "contact",
-    "portfolio_desc": "I made my own portfolio using Vue.js and Tailwindcss! The portfolio is open source and you can use it freely!"
+    "portfolio_desc": "I made my own portfolio using Vue.js and Tailwindcss! The portfolio is open source and you can use it freely!",
+    "nameless_desc": "I founded an esport team Nameless.esport, which used to be one of the best ones in Czechia for almost two years."
 }
