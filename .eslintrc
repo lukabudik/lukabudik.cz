@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["vue", "prettier"],
+  "rules": {
+    "no-console": "off",
+    "vue/singleline-html-element-content-newline": "off",
+    "no-useless-constructor": "off",
+    "@typescript-eslint/semi": "off",
+    "vue/html-self-closing": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "vue/html-closing-bracket-newline": "off",
+    "vue/html-indent": "off"
+  }
+}

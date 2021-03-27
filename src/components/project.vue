@@ -6,7 +6,7 @@
       class="w-full rounded-sm p-6 flex flex-col justify-between leading-normal"
     >
       <div>
-        <div class="my-4 clearfix" v-if="href">
+        <div v-if="href" class="my-4 clearfix">
           <a class="float-right" :href="href"> 🔗 </a>
         </div>
         <div class="font-bold text-xl mb-2">{{ title }}</div>
@@ -16,10 +16,10 @@
         <div class="flex items-center py-4">
           <div class="text-sm">
             <p
-              class="text-label-info leading-none"
               v-if="hrefSource && sourceLabel"
+              class="text-label-info leading-none"
             >
-              <b>{{ t("source") }}: </b>
+              <strong>{{ t('source') }}: </strong>
               <a
                 class="text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                 :href="hrefSource"
@@ -33,16 +33,15 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { defineProps } from "vue";
-//@ts-ignore
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+import { defineProps } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 defineProps({
   title: String,
   href: String,
   sourceLabel: String,
   hrefSource: String,
-});
+})
 </script>
 <style scoped>
 .project {
