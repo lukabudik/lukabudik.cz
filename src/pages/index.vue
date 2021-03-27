@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0 bg-gray-200 dark:bg-gray-700"
+      class="duration-300 ease-out transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-20 lg:py-0 bg-gray-200 dark:bg-gray-700"
     >
       <div
         class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto"

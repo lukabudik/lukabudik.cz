@@ -6,11 +6,13 @@ import vueI18n from '@intlify/vite-plugin-vue-i18n'
 import Layouts from 'vite-plugin-vue-layouts';
 import path from "path"
 import Pages from 'vite-plugin-pages'
+import tsconfigPaths from 'vite-tsconfig-paths'
 import ViteComponents from 'vite-plugin-components'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    tsconfigPaths(),
     vue(),
     WindiCSS(),
     ViteFonts({

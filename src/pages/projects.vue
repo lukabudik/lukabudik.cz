@@ -1,7 +1,7 @@
 <template>
-  <div class="transition-colors">
+  <div>
     <div
-      class="lg:px-48 md:px-2 justify-center flex items-center h-auto lg:h-screen flex-wrap min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0 bg-gray-200 dark:bg-gray-700"
+      class="duration-300 ease-out transition-colors lg:px-48 md:px-2 justify-center flex items-center h-auto lg:h-screen flex-wrap min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-16 md:py-0 bg-gray-200 dark:bg-gray-700"
     >
       <div class="projects my-8 px-5">
         <project
@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 const { locale, t } = useI18n()
-import { projects } from '../shared/projects'
+import { projects } from '@/shared/projects'
 </script>
 <style>
 #container {
