@@ -5,7 +5,7 @@
     >
         
         <div class="projects my-8 px-5">
-           <project :title="project.title" :href="project.href" :hrefSource="project.source" v-for="(project, index) of projects" :key="index">
+           <project :title="project.title" :href="project.href" :hrefSource="project.source" :sourceLabel="project.sourceLabel" v-for="(project, index) of projects" :key="index">
             {{ t(project.transKey) }}
             </project>
            

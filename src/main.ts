@@ -9,9 +9,10 @@ import routes from "pages-generated";
 
 import en from "./locales/en.json";
 import cs from "./locales/cs.json";
+import { getBrowserLocale } from "./logics/utils/getBrowserLocale";
 
 const i18n = createI18n({
-  locale: "en",
+  locale: getBrowserLocale({ countryCodeOnly: true }),
   messages: {
     en,
     cs,
