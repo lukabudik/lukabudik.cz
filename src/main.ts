@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { setupLayouts } from 'layouts-generated'
+import { VuePlausible } from 'vue-plausible'
 // eslint-disable-next-line prettier/prettier
 import 'windi.css'
 import NProgress from 'nprogress'
@@ -40,3 +41,4 @@ const app = createApp(App)
 app.use(i18n)
 app.use(router)
 app.mount('#app')
+app.use(VuePlausible, {domain: "budik.me"})
