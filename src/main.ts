@@ -1,11 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { setupLayouts } from 'layouts-generated'
+// eslint-disable-next-line prettier/prettier
 import 'windi.css'
 import NProgress from 'nprogress'
 
 import { createI18n } from 'vue-i18n'
 import { createRouter, createWebHistory } from 'vue-router'
-import routes from 'pages-generated'
+import generatedRoutes from 'pages-generated'
 
 import en from './locales/en.json'
 import cs from './locales/cs.json'
@@ -19,9 +21,11 @@ const i18n = createI18n({
   },
 })
 
+const routes = setupLayouts(generatedRoutes)
+
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 })
 
 router.beforeEach(() => {

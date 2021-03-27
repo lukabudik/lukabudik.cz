@@ -4,16 +4,18 @@
     "es6": true,
     "node": true
   },
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
     "plugin:vue/vue3-recommended",
     "prettier",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["vue", "prettier"],
+  "plugins": ["vue", "prettier", "@typescript-eslint"],
   "rules": {
     "no-console": "off",
     "vue/singleline-html-element-content-newline": "off",
+    "@typescript-eslint/rule-name": "warn",
     "no-useless-constructor": "off",
     "@typescript-eslint/semi": "off",
     "vue/html-self-closing": "off",

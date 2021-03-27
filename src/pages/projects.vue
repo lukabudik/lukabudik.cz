@@ -17,25 +17,11 @@
       </div>
     </div>
   </div>
-  <div class="absolute top-0 right--10 h-12 w-18 m-4 flex">
-    <button class="js-change-theme focus:outline-none px-4" @click="toggleDark">
-      {{ isDark ? '☀️' : '🌙' }}
-    </button>
-    <button class="js-change-theme focus:outline-none" @click="toggleLocale">
-      🌍
-    </button>
-  </div>
 </template>
 <script lang="ts" setup>
-import { projects } from '../shared/projects'
-import { isDark, toggleDark } from '../logics'
-import { ref, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-const { locale, t } = useI18n({})
-const toggleLocale = () => {
-  if (t('langcode') === 'cs') locale.value = 'en'
-  else locale.value = 'cs'
-}
+const { locale, t } = useI18n()
+import { projects } from '../shared/projects'
 </script>
 <style>
 #container {

@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 import ViteFonts from 'vite-plugin-fonts'
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
+import Layouts from 'vite-plugin-vue-layouts';
 import path from "path"
 import Pages from 'vite-plugin-pages'
 import ViteComponents from 'vite-plugin-components'
@@ -22,6 +23,7 @@ export default defineConfig({
 
     }),
     Pages(),
+    Layouts(),
     ViteComponents(),
   ]
 
