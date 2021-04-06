@@ -1,27 +1,19 @@
 export const projects = [
   {
-    title: 'Portfolio',
+    title: 'Portfolio (2021)',
     href: 'https://budik.me',
     sourceLabel: 'Github',
     source: 'https://github.com/lukabudik/budik.me',
     transKey: 'portfolio_desc',
   },
   {
-    title: 'Nameless.esport',
-    href: 'https://budik.me',
-    source: 'https://github.com/lukabudik/budik.me',
-    sourceLabel: 'Github',
-    transKey: 'nameless_desc',
+    title: 'Undefined (2018 - 2019)',
+    href: 'https://www.facebook.com/undefined.clothes',
+    transKey: 'undefined_desc',
   },
   {
-    title: 'neni sauc',
-    href: 'https://budik.me',
+    title: 'Nameless.esport (2016 - 2018)',
+    href: 'https://www.facebook.com/namelessesport',
     transKey: 'nameless_desc',
-  },
-  {
-    title: 'neni link',
-    transKey: 'nameless_desc',
-    source: 'https://github.com/lukabudik/budik.me',
-    sourceLabel: 'Github',
   },
 ]
