@@ -51,5 +51,9 @@
   "editor.fontFamily": "Hack, monospace",
   "workbench.tree.renderIndentGuides": "none",
   "git.ignoreLimitWarning": true,
-  "deepscan.ignoreConfirmWarning": true
+  "deepscan.ignoreConfirmWarning": true,
+  "i18n-ally.localesPaths": [
+    "src/locales"
+  ],
+  "i18n-ally.sourceLanguage": "en"
 }
