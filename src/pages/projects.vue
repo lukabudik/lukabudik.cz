@@ -17,6 +17,14 @@
       </div>
     </div>
   </div>
+  <div class="absolute top-0 left-10 h-12 w-18 m-4 flex">
+    <router-link to="/">
+      <button
+        class="focus:outline-none px-4"
+      >🏠
+      </button>
+    </router-link>
+    </div>
 </template>
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
