@@ -63,10 +63,12 @@
               </div>
 
               <div class="inline-flex w-1/3 justify-center">
+              <router-link to="contact">
                 <a
                   class="h-6 text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   >{{ t('contact') }}
                 </a>
+              </router-link>
               </div>
             </div>
             <p class="pt-4 text-md">

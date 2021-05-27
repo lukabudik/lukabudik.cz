@@ -11,5 +11,10 @@
   "contact": "kontakt",
   "portfolio_desc": "Vytvořil jsem své vlastní portfolio pomocí Vue.js a Tailwindcss! Portfolio je open source a můžete jej volně používat!",
   "nameless_desc": "Založil jsem esportový tým Nameless.esport, který byl téměř dva roky jedním z nejlepších v Česku.",
-  "undefined_desc": "Založil jsem vlastní módní značku, která i přes své krátké působení uspěla ve street wear komunitě."
+  "undefined_desc": "Založil jsem vlastní módní značku, která i přes své krátké působení uspěla ve street wear komunitě.",
+  "phone": "Telefonní číslo",
+  "email": "E-mail",
+  "full_name": "Celé jméno",
+  "message": "Zpráva",
+  "send_message": "Odeslat zprávu"
 }
