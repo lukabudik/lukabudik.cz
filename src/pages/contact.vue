@@ -14,17 +14,17 @@
           <div>
             <span class="text-sm font-bold">{{ t('full_name') }}</span>
             <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text" placeholder="">
+              type="text" required>
           </div>
           <div class="mt-8">
             <span class="text-sm font-bold">{{ t('email') }}</span>
             <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text">
+              type="email" required>
           </div>
           <div class="mt-8">
             <span class=" text-sm font-bold">{{ t('message') }}</span>
             <textarea
-              class="resize-none w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+              class="resize-none w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required></textarea>
           </div>
           <div class="mt-8">
             <button
