@@ -24,11 +24,11 @@
           <div class="mt-8">
             <span class=" text-sm font-bold">{{ t('message') }}</span>
             <textarea
-              class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+              class="resize-none w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
           </div>
           <div class="mt-8">
             <button
-              class="text-sm font-bold tracking-wide bg-blue-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+              class="text-sm font-bold tracking-wide bg-blue-600 hover:bg-blue-700 duration-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"> 
               {{ t('send_message') }}
             </button>
           </div>
