@@ -1,53 +1,115 @@
 <template>
   <div>
-    <div
-      class="duration-300 ease-out transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-20 lg:py-0 bg-gray-200 dark:bg-gray-700"
-    >
+    <div>
       <div
-        class="max-w-4xl flex items-center justify-center h-auto lg:h-screen flex-wrap mx-auto"
+        class="duration-300 ease-out transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-20 lg:py-0 bg-gray-200 dark:bg-gray-700"
       >
         <div
-          id="profile"
-          class="w-120 rounded-lg shadow-2xl bg-white dark:bg-gray-800 mx-6 lg:mx-0 px-15 py-10"
+          class="max-w-4xl flex items-center justify-center h-auto lg:h-screen flex-wrap mx-auto"
         >
-          <div class="">
-          <div>
-            <span class="text-sm font-bold">{{ t('full_name') }}</span>
-            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text" required>
+          <div
+            id="profile"
+            class="w-120 rounded-lg shadow-2xl bg-white dark:bg-gray-800 mx-6 lg:mx-0 px-15 py-10"
+          >
+            <form @submit.prevent="submit">
+              <div>
+                <span class="text-sm font-bold">{{ t('full_name') }}</span>
+                <input
+                  minlength="5"
+                  class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  type="text"
+                  required
+                  :placeholder="t('placeholder_name')"
+                  v-model="values.name"
+                />
+              </div>
+              <div class="mt-8">
+                <span class="text-sm font-bold">{{ t('email') }}</span>
+                <input
+                  minlength="5"
+                  class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  type="email"
+                  :placeholder="t('placeholder_email')"
+                  required
+                  v-model="values.email"
+                />
+              </div>
+              <div class="mt-8">
+                <span class="text-sm font-bold">{{ t('message') }}</span>
+                <textarea
+                  class="resize-none w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  required
+                  minlength="20"
+                  :placeholder="t('placeholder_message')"
+                  v-model="values.message"
+                ></textarea>
+              </div>
+              <div class="mt-8">
+                <button
+                  class="text-sm font-bold tracking-wide duration-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+                  type="submit"
+                  :class="[
+                    status === 'error'
+                      ? 'bg-red-500 hover:bg-red-700'
+                      : status === 'success'
+                      ? 'bg-green-500 hover:bg-green-700'
+                      : 'bg-blue-600 hover:bg-blue-700',
+                  ]"
+                >
+                  {{
+                    status === 'success'
+                      ? t('message_success')
+                      : status === 'error'
+                      ? t('message_error')
+                      : t('send_message')
+                  }}
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="mt-8">
-            <span class="text-sm font-bold">{{ t('email') }}</span>
-            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="email" required>
-          </div>
-          <div class="mt-8">
-            <span class=" text-sm font-bold">{{ t('message') }}</span>
-            <textarea
-              class="resize-none w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required></textarea>
-          </div>
-          <div class="mt-8">
-            <button
-              class="text-sm font-bold tracking-wide bg-blue-600 hover:bg-blue-700 duration-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"> 
-              {{ t('send_message') }}
-            </button>
-          </div>
-        </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="absolute top-0 left--10 h-12 w-18 m-4 flex">
-      <button
-        class="focus:outline-none px-4"
-      >
-      <router-link to="/">🏠
-      </router-link>
+    <div class="absolute top-0 left--10 h-12 w-18 m-4 flex">
+      <button class="focus:outline-none px-4">
+        <router-link to="/">🏠</router-link>
       </button>
     </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
+import { useForm } from '@/logics/form'
+import { reactive, ref, watchEffect } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { load } from 'recaptcha-v3'
+
 const { locale, t } = useI18n()
+
+const values = reactive({
+  name: '',
+  email: '',
+  message: '',
+  recaptchaToken: '',
+})
+const status = ref('')
+const { sendResponse } = useForm()
+
+const submit = async () => {
+  await validateCaptcha()
+  const { data } = await sendResponse(values)
+  status.value = data.status
+}
+watchEffect(() => {
+  if (status.value === 'success') {
+    values.name = ''
+    values.email = ''
+    values.message = ''
+  }
+})
+
+const validateCaptcha = async () => {
+  const recaptcha = await load('6Ld6MPoaAAAAAG74-Q-6qTBTw-JizklH_rDMdqMh')
+  values.recaptchaToken = await recaptcha.execute('contactForm')
+}
 </script>

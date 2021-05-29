@@ -2,7 +2,7 @@
   "name": "Luka Budik",
   "language": "Czech",
   "langcode": "en",
-  "job": "Proffesional dreamer",
+  "job": "Professional dreamer",
   "location": "Brno, Czechia",
   "about": "Hey, my name is Luka and business is my passion! I also love to code, market and all sorts of other stuff! Most importantly, I like making my ideas and dreams a reality!",
   "contactme": "Contact me",
@@ -16,5 +16,10 @@
   "email": "E-mail",
   "full_name": "Full name",
   "message": "Message",
-  "send_message": "Send message"
+  "send_message": "Send message",
+  "placeholder_name": "John Doe",
+  "placeholder_email": "johndoe email.com",
+  "placeholder_message": "Your message...",
+  "message_success": "Message sent!",
+  "message_error": "Something went wrong!"
 }

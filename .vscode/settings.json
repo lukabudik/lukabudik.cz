@@ -18,7 +18,7 @@
     "editor.formatOnPaste": false
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
   },
@@ -28,7 +28,7 @@
     "editor.formatOnPaste": false
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
   },
@@ -52,8 +52,7 @@
   "workbench.tree.renderIndentGuides": "none",
   "git.ignoreLimitWarning": true,
   "deepscan.ignoreConfirmWarning": true,
-  "i18n-ally.localesPaths": [
-    "src/locales"
-  ],
-  "i18n-ally.sourceLanguage": "en"
+  "i18n-ally.localesPaths": ["src/locales"],
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.keystyle": "nested"
 }

@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { setupLayouts } from 'layouts-generated'
+import firebase from 'firebase'
+import {config} from 'config/firebase'
 // eslint-disable-next-line prettier/prettier
 import 'windi.css'
 import NProgress from 'nprogress'
@@ -12,6 +14,8 @@ import generatedRoutes from 'pages-generated'
 import en from './locales/en.json'
 import cs from './locales/cs.json'
 import { getBrowserLocale } from './logics/utils/getBrowserLocale'
+
+firebase.initializeApp(config)
 
 const i18n = createI18n({
   locale: getBrowserLocale({ countryCodeOnly: true }),

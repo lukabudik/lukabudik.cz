@@ -16,5 +16,8 @@
   "email": "E-mail",
   "full_name": "Celé jméno",
   "message": "Zpráva",
-  "send_message": "Odeslat zprávu"
+  "send_message": "Odeslat zprávu",
+  "placeholder_message": "Vaše zpráva...",
+  "message_success": "Zpráva odeslána!",
+  "message_error": "Něco se pokazilo!"
 }

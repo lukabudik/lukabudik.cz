@@ -10,7 +10,8 @@
     "lib": ["DOM", "ESNext"],
     "esModuleInterop": true,
     "types": ["vite/client", "vite-plugin-vue-layouts/client"],
-    "paths": { "@/*": ["src/*"] }
+    "paths": { "@/*": ["src/*"] },
+    "moduleResolution": "node"
   },
   "exclude": ["dist", "node_modules"]
 }
