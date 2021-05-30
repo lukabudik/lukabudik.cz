@@ -43,14 +43,3 @@ defineProps({
   hrefSource: String,
 })
 </script>
-<style scoped>
-.project {
-  display: grid;
-}
-@media only screen and (max-width: 600px) {
-  .project {
-    display: block;
-    width: 100%;
-  }
-}
-</style>

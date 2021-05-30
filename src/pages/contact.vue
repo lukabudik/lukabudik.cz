@@ -2,14 +2,14 @@
   <div>
     <div>
       <div
-        class="duration-300 ease-out transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-20 lg:py-0 bg-gray-200 dark:bg-gray-700"
+        class="duration-300 ease-out transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-24 lg:py-0 bg-gray-200 dark:bg-gray-700"
       >
         <div
           class="max-w-4xl flex items-center justify-center h-auto lg:h-screen flex-wrap mx-auto"
         >
           <div
             id="profile"
-            class="w-120 rounded-lg shadow-2xl bg-white dark:bg-gray-800 mx-6 lg:mx-0 px-15 py-10"
+            class="w-120 rounded-lg shadow-2xl bg-white dark:bg-gray-800 mx-6 lg:mx-0 md:px-15 px-10 py-10"
           >
             <form @submit.prevent="submit">
               <div>
@@ -29,7 +29,9 @@
                   minlength="5"
                   class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   type="email"
-                  :placeholder="t('placeholder_email')"
+                  :placeholder="
+                    t('placeholder_email_name') + '@' + t('placeholder_email')
+                  "
                   required
                   v-model="values.email"
                 />
@@ -46,8 +48,9 @@
               </div>
               <div class="mt-8">
                 <button
-                  class="text-sm font-bold tracking-wide duration-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+                  class="h-12 text-sm font-bold tracking-wide duration-500 text-gray-100 rounded-lg w-full focus:outline-none focus:shadow-outline flex justify-center items-center"
                   type="submit"
+                  :disabled="loading"
                   :class="[
                     status === 'error'
                       ? 'bg-red-500 hover:bg-red-700'
@@ -56,24 +59,25 @@
                       : 'bg-blue-600 hover:bg-blue-700',
                   ]"
                 >
-                  {{
-                    status === 'success'
-                      ? t('message_success')
-                      : status === 'error'
-                      ? t('message_error')
-                      : t('send_message')
-                  }}
+                  <span v-if="!loading">
+                    {{
+                      status === 'success'
+                        ? t('message_success')
+                        : status === 'error'
+                        ? t('message_error')
+                        : t('send_message')
+                    }}
+                  </span>
+                  <div
+                    v-else
+                    class="spinner animate-spin rounded-full w-7 h-7 border-4 border-transparent"
+                  ></div>
                 </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </div>
-    <div class="absolute top-0 left--10 h-12 w-18 m-4 flex">
-      <button class="focus:outline-none px-4">
-        <router-link to="/">🏠</router-link>
-      </button>
     </div>
   </div>
 </template>
@@ -92,12 +96,18 @@ const values = reactive({
   message: '',
   recaptchaToken: '',
 })
+
 const status = ref('')
+const loading = ref(false)
+
 const { sendResponse } = useForm()
 
 const submit = async () => {
+  if (loading.value) return
+  loading.value = true
   await validateCaptcha()
   const { data } = await sendResponse(values)
+  loading.value = false
   status.value = data.status
 }
 watchEffect(() => {
@@ -113,3 +123,9 @@ const validateCaptcha = async () => {
   values.recaptchaToken = await recaptcha.execute('contactForm')
 }
 </script>
+
+<style scoped>
+.spinner {
+  border-top: solid white;
+}
+</style>

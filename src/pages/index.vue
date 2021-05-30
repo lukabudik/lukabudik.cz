@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="duration-300 ease-out transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-20 lg:py-0 bg-gray-200 dark:bg-gray-700"
+      class="duration-300 ease-out transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-24 lg:py-0 bg-gray-200 dark:bg-gray-700"
     >
       <div
         class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto"
@@ -12,7 +12,7 @@
         >
           <div class="p-4 md:p-12 text-center lg:text-left">
             <img
-              class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
+              class="block lg:hidden rounded-full animate-spin shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
               width="1229"
               height="1229"
               :src="'luka_sm.webp'"
@@ -50,13 +50,17 @@
               {{ t('location') }}
             </p>
 
+           
+            <p class="pt-4 text-md">
+              {{ t('about') }}
+            </p>
             <div
               class="mt-3 pb-3 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between"
             >
               <div class="inline-flex w-1/3 justify-center">
                 <router-link to="projects">
                   <a
-                    class="h-6 text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                    class="h-6 text-blue-500 underline dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                     >{{ t('projects') }}
                   </a>
                 </router-link>
@@ -65,15 +69,12 @@
               <div class="inline-flex w-1/3 justify-center">
               <router-link to="contact">
                 <a
-                  class="h-6 text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 text-blue-500 underline dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   >{{ t('contact') }}
                 </a>
               </router-link>
               </div>
             </div>
-            <p class="pt-4 text-md">
-              {{ t('about') }}
-            </p>
             <div
               class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between"
             >
@@ -82,7 +83,7 @@
                 target="_blank"
                 href="https://www.facebook.com/lukabudik"
                 ><svg
-                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +98,7 @@
                 target="_blank"
                 href="https://www.linkedin.com/in/lukabudik/"
                 ><svg
-                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +113,7 @@
                 target="_blank"
                 href="https://github.com/lukabudik"
                 ><svg
-                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +128,7 @@
                 target="_blank"
                 href="https://soundcloud.com/sheffikthegod"
                 ><svg
-                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +143,7 @@
                 target="_blank"
                 href="https://dribbble.com/luka_budik"
                 ><svg
-                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +158,7 @@
                 target="_blank"
                 href="https://www.instagram.com/luka_budik/"
                 ><svg
-                  class="h-6 fill-current text-blue-600 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
+                  class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +169,6 @@
                   /></svg
               ></a>
             </div>
-            <!--https://simpleicons.org/ -->
           </div>
         </div>
         <div class="w-full lg:w-2/5">

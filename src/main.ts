@@ -7,23 +7,10 @@ import {config} from 'config/firebase'
 import 'windi.css'
 import NProgress from 'nprogress'
 
+// generate pages
 import { createI18n } from 'vue-i18n'
 import { createRouter, createWebHistory } from 'vue-router'
 import generatedRoutes from 'pages-generated'
-
-import en from './locales/en.json'
-import cs from './locales/cs.json'
-import { getBrowserLocale } from './logics/utils/getBrowserLocale'
-
-firebase.initializeApp(config)
-
-const i18n = createI18n({
-  locale: getBrowserLocale({ countryCodeOnly: true }),
-  messages: {
-    en,
-    cs,
-  },
-})
 
 const routes = setupLayouts(generatedRoutes)
 
@@ -38,6 +25,23 @@ router.beforeEach(() => {
 router.afterEach(() => {
   NProgress.done()
 })
+
+//setup i18n
+import { getBrowserLocale } from './logics/utils/getBrowserLocale'
+import en from './locales/en.json'
+import cs from './locales/cs.json'
+
+const i18n = createI18n({
+  locale: getBrowserLocale() ?? "en",
+  defaultLocale: "en",
+  messages: {
+    en,
+    cs,
+  },
+})
+
+// initialize firebase
+firebase.initializeApp(config)
 
 const app = createApp(App)
 
