@@ -4,29 +4,21 @@
     <div class="flex justify-between top-0 py-6 px-6 absolute w-screen text-xl">
       <div class="p-4">
         <button class="focus:outline-none px-4">
-          <router-link to="/">{{ route.name != 'index' ? '🏠' : '👋' }} </router-link>
-        </button> 
-      </div> 
+          <router-link to="/"
+            >{{ route.name != 'index' ? '🏠' : '👋' }}
+          </router-link>
+        </button>
+      </div>
       <div class="p-4">
-        <transition name="bounce" mode="out-in">
         <button
-          class="focus:outline-none px-4"
-          v-if="isDark"
+          class="animatedbutton focus:outline-none px-4"
           @click="toggleDark"
         >
-        ☀️
-      
+          {{ isDark ? '☀️' : '🌙' }}
         </button>
-        <button
-          class="focus:outline-none px-4"
-          v-else
-          @click="toggleDark"
-        >
-        🌙
-      
+        <button class="animatedbutton focus:outline-none" @click="switchLocale">
+          🌍
         </button>
-      </transition>
-        <button class="animatedbutton focus:outline-none" @click="switchLocale">🌍</button>
       </div>
     </div>
   </div>
@@ -62,9 +54,6 @@ const route = useRoute()
 }
 </style>
 <style scoped>
-.bounce-enter-active {
-  animation: bounce-in .5s;
-}
 @keyframes bounce-in {
   0% {
     transform: scale(0);
@@ -76,11 +65,11 @@ const route = useRoute()
     transform: scale(1);
   }
 }
-.animatedbutton:focus{
-  animation: ease-out bounce-in .5s;
+.animatedbutton:focus {
+  animation: ease-out bounce-in 0.5s;
 }
 .animatedbutton:active {
   -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 </style>

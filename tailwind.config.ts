@@ -6,10 +6,5 @@ export default defineConfig({
     fontFamily: {
       sans: ['Montserrat', 'sans'],
     },
-    extend: {
-      gridAutoColumns: {
-        '3fr': 'minmax(300px, 3fr)',
-      },
-    },
   },
 })
