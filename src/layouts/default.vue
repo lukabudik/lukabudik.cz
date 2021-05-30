@@ -4,7 +4,7 @@
     <div class="flex justify-between top-0 py-6 px-6 absolute w-screen text-xl">
       <div class="p-4">
         <button class="focus:outline-none px-4">
-          <router-link to="/"
+          <router-link to="/" class="animatedbutton focus:outline-none"
             >{{ route.name != 'index' ? '🏠' : '👋' }}
           </router-link>
         </button>

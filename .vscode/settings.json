@@ -3,36 +3,29 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "files.eol": "\n",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
   },
   "[typescript]": {
-    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
   },
   "[vue]": {
-    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
   },
-  "prettier.packageManager": "yarn",
   "prettier.requireConfig": true,
   "prettier.configPath": "./.prettierrc",
   "eslint.validate": [
@@ -45,6 +38,7 @@
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "eslint.packageManager": "yarn",
+  "eslint.codeActionsOnSave.mode": "all",
   "editor.renderIndentGuides": true,
   "editor.renderWhitespace": "none",
   "vetur.validation.template": false,

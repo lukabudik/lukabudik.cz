@@ -14,7 +14,7 @@
             <form @submit.prevent="submit">
               <div>
                 <span class="text-sm font-bold">{{ t('full_name') }}</span>
-                <input
+                    <input
                   minlength="5"
                   class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   type="text"
@@ -36,7 +36,7 @@
                   v-model="values.email"
                 />
               </div>
-              <div class="mt-8">
+                <div class="mt-8">
                 <span class="text-sm font-bold">{{ t('message') }}</span>
                 <textarea
                   class="resize-none w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -50,27 +50,29 @@
                 <button
                   class="h-12 text-sm font-bold tracking-wide duration-500 text-gray-100 rounded-lg w-full focus:outline-none focus:shadow-outline flex justify-center items-center"
                   type="submit"
-                  :disabled="loading"
+                  :disabled="state.loading"
                   :class="[
-                    status === 'error'
+                    state.loading
+                      ? 'cursor-not-allowed bg-blue-600'
+                      : state.status === 'error'
                       ? 'bg-red-500 hover:bg-red-700'
-                      : status === 'success'
+                      : state.status === 'success'
                       ? 'bg-green-500 hover:bg-green-700'
                       : 'bg-blue-600 hover:bg-blue-700',
                   ]"
                 >
-                  <span v-if="!loading">
+                  <span v-if="!state.loading">
                     {{
-                      status === 'success'
+                      state.status === 'success'
                         ? t('message_success')
-                        : status === 'error'
+                        : state.status === 'error'
                         ? t('message_error')
                         : t('send_message')
                     }}
                   </span>
                   <div
                     v-else
-                    class="spinner animate-spin rounded-full w-7 h-7 border-4 border-transparent"
+                    class="spinner animate-spin rounded-full w-7 h-7 border-4 border-white border-opacity-20"
                   ></div>
                 </button>
               </div>
@@ -84,7 +86,7 @@
 
 <script lang="ts" setup>
 import { useForm } from '@/logics/form'
-import { reactive, ref, watchEffect } from 'vue'
+import { reactive, ref, watchEffect} from 'vue'
 import { useI18n } from 'vue-i18n'
 import { load } from 'recaptcha-v3'
 
@@ -97,21 +99,27 @@ const values = reactive({
   recaptchaToken: '',
 })
 
-const status = ref('')
-const loading = ref(false)
+const state = reactive({
+  status: '' as "success" | "error",
+  loading: false,
+})
 
 const { sendResponse } = useForm()
 
 const submit = async () => {
-  if (loading.value) return
-  loading.value = true
+  if (state.loading) return
+  state.loading = true
+
   await validateCaptcha()
-  const { data } = await sendResponse(values)
-  loading.value = false
-  status.value = data.status
+
+  const { status } = await sendResponse(values)
+
+
+  state.loading = false
+  state.status = status
 }
 watchEffect(() => {
-  if (status.value === 'success') {
+  if (state.status === 'success') {
     values.name = ''
     values.email = ''
     values.message = ''

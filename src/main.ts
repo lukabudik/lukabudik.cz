@@ -3,13 +3,13 @@ import App from './App.vue'
 import { setupLayouts } from 'layouts-generated'
 import firebase from 'firebase'
 import {config} from 'config/firebase'
-// eslint-disable-next-line prettier/prettier
 import 'windi.css'
 import NProgress from 'nprogress'
 
 // generate pages
 import { createI18n } from 'vue-i18n'
 import { createRouter, createWebHistory } from 'vue-router'
+// @ts-ignore
 import generatedRoutes from 'pages-generated'
 
 const routes = setupLayouts(generatedRoutes)

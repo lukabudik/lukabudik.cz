@@ -8,6 +8,7 @@
     "target": "es2016",
     "lib": ["DOM", "ESNext"],
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "types": ["vite/client", "vite-plugin-vue-layouts/client"],
     "paths": { "@/*": ["src/*"] },
     "moduleResolution": "node"

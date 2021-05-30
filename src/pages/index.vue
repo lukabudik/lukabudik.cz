@@ -12,7 +12,7 @@
         >
           <div class="p-4 md:p-12 text-center lg:text-left">
             <img
-              class="block lg:hidden rounded-full animate-spin shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
+              class="block lg:hidden rounded-full hover:animate-spin shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
               width="1229"
               height="1229"
               :src="'luka_sm.webp'"

@@ -1,4 +1,6 @@
-export const projects = [
+import IProject from "@/interfaces/IProject";
+
+export const projects: IProject[] = [
   {
     title: 'Portfolio (2021)',
     href: 'https://budik.me',
