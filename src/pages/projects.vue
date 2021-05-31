@@ -1,9 +1,9 @@
 <template>
   <div>
     <div
-      class="py-24 px-4 duration-300 ease-out transition-colors justify-center flex items-center min-h-screen min-h-screen font-sans antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover bg-gray-200 dark:bg-gray-700"
+      class="py-24 px-4 duration-300 ease-out transition-colors justify-center flex items-center min-h-screen antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover bg-gray-200 dark:bg-gray-700 sm:max-w-screen"
     >
-      <div class="grid gap-4 my-8 px-5">
+      <div class="grid gap-4 my-8 px-5 sm:px-0">
         <project
           v-for="(project, index) of projects"
           :key="index"

@@ -1,18 +1,18 @@
 <template>
   <div>
     <div
-      class="duration-300 ease-out transition-colors min-h-screen font-sans scale-50 antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-24 lg:py-0 bg-gray-200 dark:bg-gray-700"
+      class="px-6 duration-300 ease-out transition-colors min-h-screen antialiased text-gray-900 dark:text-white leading-normal tracking-wider bg-cover py-32 md:py-24 lg:py-0 bg-gray-200 dark:bg-gray-700"
     >
       <div
-        class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto"
+        class="md:max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto "
       >
         <div
           id="profile"
-          class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white dark:bg-gray-800 mx-6 lg:mx-0"
+          class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white dark:bg-gray-800"
         >
           <div class="p-4 md:p-12 text-center lg:text-left">
             <img
-              class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
+              class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48"
               width="500"
               height="500"
               :src="'luka_sm.webp'"
@@ -82,6 +82,7 @@
                 class="link"
                 target="_blank"
                 href="https://www.facebook.com/lukabudik"
+                rel="noreferrer"
                 ><svg
                   class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
@@ -97,6 +98,7 @@
                 class="link"
                 target="_blank"
                 href="https://www.linkedin.com/in/lukabudik/"
+                rel="noreferrer"
                 ><svg
                   class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
@@ -112,6 +114,7 @@
                 class="link"
                 target="_blank"
                 href="https://github.com/lukabudik"
+                rel="noreferrer"
                 ><svg
                   class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
@@ -127,6 +130,7 @@
                 class="link"
                 target="_blank"
                 href="https://soundcloud.com/sheffikthegod"
+                rel="noreferrer"
                 ><svg
                   class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
@@ -142,6 +146,7 @@
                 class="link"
                 target="_blank"
                 href="https://dribbble.com/luka_budik"
+                rel="noreferrer"
                 ><svg
                   class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
@@ -157,6 +162,7 @@
                 class="link"
                 target="_blank"
                 href="https://www.instagram.com/luka_budik/"
+                rel="noreferrer"
                 ><svg
                   class="h-6 fill-current text-blue-800 dark:hover:dark:text-gray-600 hover:text-blue-700 duration-500"
                   role="img"
