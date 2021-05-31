@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-200 dark:bg-gray-700">
+  <div>
     <router-view />
     <div class="flex justify-between top-0 py-6 px-6 absolute w-screen text-xl">
       <div class="p-4">
