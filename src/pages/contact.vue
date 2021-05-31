@@ -95,7 +95,7 @@ import { config } from 'config/firebase'
 
 const { locale, t } = useI18n()
 
-onBeforeMount(() => {
+onBeforeMount(async() => {
   if (!firebase.apps.length) firebase.initializeApp(config)
 })
 
