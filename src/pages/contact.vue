@@ -88,14 +88,14 @@
 import { useForm } from '@/logics/form'
 import firebase from 'firebase/app'
 import "firebase/functions"
-import { reactive, ref, watchEffect, onBeforeMount } from 'vue'
+import { reactive, ref, watchEffect, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { load } from 'recaptcha-v3'
 import { config } from 'config/firebase'
 
 const { locale, t } = useI18n()
 
-onBeforeMount(async() => {
+onMounted(async() => {
   if (!firebase.apps.length) firebase.initializeApp(config)
 })
 

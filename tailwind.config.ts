@@ -4,7 +4,7 @@ export default defineConfig({
   darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['Montserrat', 'sans'],
+      sans: ['Montserrat', 'sans-serif'],
     },
   },
 })
