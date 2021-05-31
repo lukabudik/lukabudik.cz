@@ -1,7 +1,5 @@
 import App from './App.vue'
 import { setupLayouts } from 'layouts-generated'
-import firebase from 'firebase'
-import { config } from 'config/firebase'
 import 'windi.css'
 import { ViteSSG } from 'vite-ssg'
 import NProgress from 'nprogress'
@@ -19,9 +17,6 @@ import en from './locales/en.json'
 import cs from './locales/cs.json'
 import { getBrowserLocale } from './logics/utils/getBrowserLocale'
 
-// initialize firebase
-firebase.initializeApp(config)
-
 export const createApp = ViteSSG(
   App,
   { routes },
@@ -36,13 +31,12 @@ export const createApp = ViteSSG(
     }
     const i18n = createI18n({
       locale: isClient ? getBrowserLocale() : 'cs',
-      defaultLocale: 'cs',
+      fallbackLocale: 'cs',
       messages: {
         en,
         cs,
       },
     })
     app.use(i18n)
-    app.use(router)
   },
 )

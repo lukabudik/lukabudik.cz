@@ -14,7 +14,7 @@
             <form @submit.prevent="submit">
               <div>
                 <span class="text-sm font-bold">{{ t('full_name') }}</span>
-                    <input
+                <input
                   minlength="5"
                   class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   type="text"
@@ -36,7 +36,7 @@
                   v-model="values.email"
                 />
               </div>
-                <div class="mt-8">
+              <div class="mt-8">
                 <span class="text-sm font-bold">{{ t('message') }}</span>
                 <textarea
                   class="resize-none w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -86,11 +86,18 @@
 
 <script lang="ts" setup>
 import { useForm } from '@/logics/form'
-import { reactive, ref, watchEffect} from 'vue'
+import firebase from 'firebase/app'
+import "firebase/functions"
+import { reactive, ref, watchEffect, onBeforeMount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { load } from 'recaptcha-v3'
+import { config } from 'config/firebase'
 
 const { locale, t } = useI18n()
+
+onBeforeMount(() => {
+  if (!firebase.apps.length) firebase.initializeApp(config)
+})
 
 const values = reactive({
   name: '',
@@ -100,7 +107,7 @@ const values = reactive({
 })
 
 const state = reactive({
-  status: '' as "success" | "error",
+  status: '' as 'success' | 'error',
   loading: false,
 })
 
@@ -113,7 +120,6 @@ const submit = async () => {
   await validateCaptcha()
 
   const { status } = await sendResponse(values)
-
 
   state.loading = false
   state.status = status
