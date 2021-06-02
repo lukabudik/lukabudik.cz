@@ -18,21 +18,5 @@ export const projects: IProject[] = [
     href: 'https://www.facebook.com/namelessesport',
     transKey: 'nameless_desc',
   },
-  {
-    title: 'Nameless.esport (2016 - 2018)',
-    href: 'https://www.facebook.com/namelessesport',
-    transKey: 'nameless_desc',
-  },
-  {
-    title: 'Nameless.esport (2016 - 2018)',
-    href: 'https://www.facebook.com/namelessesport',
-    transKey: 'nameless_desc',
-  },
-  {
-    title: 'Nameless.esport (2016 - 2018)',
-    href: 'https://www.facebook.com/namelessesport',
-    transKey: 'nameless_desc',
-  },
- 
 
 ]

@@ -4,19 +4,19 @@
     <div class="flex justify-between top-0 px-6 absolute w-screen text-xl">
       <div>
         <button class="focus:outline-none py-8 px-4">
-          <router-link to="/" class="animatedbutton focus:outline-none"
+          <router-link to="/" class="select-none animatedbutton focus:outline-none"
             >{{ route.name != 'index' ? '🏠' : '👋' }}
           </router-link>
         </button>
       </div>
       <div>
         <button
-          class="animatedbutton focus:outline-none py-8 px-4"
+          class="animatedbutton focus:outline-none py-8 px-4 select-none"
           @click="toggleDark"
         >
           {{ isDark ? '☀️' : '🌙' }}
         </button>
-        <button class="animatedbutton focus:outline-none py-8 px-4" @click="switchLocale">
+        <button class="animatedbutton focus:outline-none py-8 px-4 select-none" @click="switchLocale">
           🌍
         </button>
       </div>
