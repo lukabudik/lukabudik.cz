@@ -19,7 +19,7 @@
                   class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   type="text"
                   required
-                  :placeholder="t('placeholder_name') ahoj"
+                  :placeholder="t('placeholder_name')"
                   v-model="values.name"
                 />
               </div>

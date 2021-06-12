@@ -18,12 +18,8 @@
   "message": "Message",
   "send_message": "Send message",
   "placeholder_name": "John Doe",
-<<<<<<< Updated upstream
   "placeholder_email_name": "johndoe",
   "placeholder_email": "email.com",
-=======
-  "placeholder_email": "johndoe &#64; email.com",
->>>>>>> Stashed changes
   "placeholder_message": "Your message...",
   "message_success": "Message sent!",
   "message_error": "Something went wrong!"
