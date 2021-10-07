@@ -1,12 +1,15 @@
 import IProject from "@/interfaces/IProject";
 
 export const projects: IProject[] = [
+  
   {
-    title: 'Portfolio (2021)',
-    href: 'https://budik.me',
-    sourceLabel: 'Github',
-    source: 'https://github.com/lukabudik/budik.me',
-    transKey: 'portfolio_desc',
+    title: 'Budio (2021 - ?)',
+    href: 'https://budio.cz',
+    transKey: 'budio_desc',
+  },{
+    title: 'TvůjDezert (2020 - ?)',
+    href: 'https://tvujdezert.cz',
+    transKey: 'tvujdezert_desc',
   },
   {
     title: 'Undefined (2018 - 2019)',
